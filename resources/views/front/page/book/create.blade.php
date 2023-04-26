@@ -1,6 +1,8 @@
-@extends('layouts.app')
+@extends('front.layouts.master')
 
-@section('content')
+@section('title', 'book')
+
+@section('main')
 <h1>著書登録</h1>
 
 {!! Form::open(['route' => 'books.store']) !!}

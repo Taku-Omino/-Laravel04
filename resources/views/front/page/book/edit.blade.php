@@ -1,6 +1,8 @@
-@extends('layouts.app')
+@extends('front.layouts.master')
 
-@section('content')
+@section('title', 'book')
+
+@section('main')
 <h1>著書編集</h1>
 
 {!! Form::model($book, ['route' => ['books.update', $book->id], 'method' => 'PUT']) !!}
