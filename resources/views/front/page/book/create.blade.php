@@ -12,8 +12,12 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('author', '著者名:') !!}
-        {!! Form::text('author', null, ['class' => 'form-control']) !!}
+        <label for="author_id">著者名</label>
+        <select class="form-control" id="author_id" name="author_id">
+            @foreach ($authors as $author)
+                <option value="{{ $author->id }}">{{ $author->name }}</option>
+            @endforeach
+        </select>
     </div>
 
     <div class="form-group">

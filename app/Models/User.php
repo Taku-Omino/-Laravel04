@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'author_id', // author_idを追加
     ];
 
     /**
