@@ -27,7 +27,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        $authors = Author::all();
+        $authors = User::select('id', 'name')->pluck("name", "id");
         return view('front.page.book.create', compact('authors'));
     }
 
@@ -80,9 +80,11 @@ class BookController extends Controller
      */
     public function update(Request $request, Book $book)
     {
+        $authors = User::select('id', 'name')->pluck("name", "id");
         $book->update($request->all());
-        return redirect()->route('books.show', $book->id);
+        return view('front.page.book.show', compact('book', 'authors'));
     }
+
 
 
     /**

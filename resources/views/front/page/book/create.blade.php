@@ -10,14 +10,12 @@
         {!! Form::label('title', 'タイトル:') !!}
         {!! Form::text('title', null, ['class' => 'form-control']) !!}
     </div>
+
     <div class="form-group">
-        <label for="author_id">著者名</label>
-        <select class="form-control" id="author_id" name="author_id">
-            @foreach ($authors as $author)
-                <option value="{{ $author->id }}">{{ $author->name }}</option>
-            @endforeach
-        </select>
+        {!! Form::label('author_id', '著者名:') !!}
+        {!! Form::select('author_id', $authors, null, ['class' => 'form-control']) !!}
     </div>
+
     <div class="form-group">
         {!! Form::label('comment', 'コメント:') !!}
         {!! Form::textarea('comment', null, ['class' => 'form-control']) !!}

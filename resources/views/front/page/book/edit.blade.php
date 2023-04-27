@@ -12,8 +12,8 @@
     </div>
 
     <div class="form-group">
-    {!! Form::label('author', '著者名:') !!}
-    {!! Form::text('author', null, ['class' => 'form-control']) !!}
+        {!! Form::label('author_id', '著者名:') !!}
+        {!! Form::select('author_id', $authors, null, ['class' => 'form-control']) !!}
     </div>
 
     <div class="form-group">
