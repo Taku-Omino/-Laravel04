@@ -10,7 +10,6 @@
         {!! Form::label('title', 'タイトル:') !!}
         {!! Form::text('title', null, ['class' => 'form-control']) !!}
     </div>
-
     <div class="form-group">
         <label for="author_id">著者名</label>
         <select class="form-control" id="author_id" name="author_id">
@@ -19,7 +18,6 @@
             @endforeach
         </select>
     </div>
-
     <div class="form-group">
         {!! Form::label('comment', 'コメント:') !!}
         {!! Form::textarea('comment', null, ['class' => 'form-control']) !!}

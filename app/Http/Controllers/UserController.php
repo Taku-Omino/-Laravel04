@@ -26,11 +26,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        $authors = Author::all(); // 著者一覧を取得
-        return view('front.page.books.create', compact('authors')); // 著者一覧をビューに渡す
+        //
     }
-
-
 
     /**
      * Store a newly created resource in storage.
