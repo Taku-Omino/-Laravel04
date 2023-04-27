@@ -22,6 +22,9 @@
     </div>
 
     {!! Form::submit('投稿', ['class' => 'btn btn-primary']) !!}
+    {!! Form::button('キャンセル', ['class' => 'btn btn-secondary', 'onClick' => 'location.href="'.route('books.index').'"']) !!}
+
+
 {!! Form::close() !!}
 
 @endsection

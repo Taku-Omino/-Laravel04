@@ -21,8 +21,8 @@
         {!! Form::textarea('comment', null, ['class' => 'form-control']) !!}
     </div>
 
-{!! Form::submit('修正する', ['class' => 'btn btn-primary']) !!}
-
+    {!! Form::submit('修正する', ['class' => 'btn btn-primary']) !!}
+    {!! Form::button('キャンセル', ['class' => 'btn btn-secondary', 'onClick' => 'location.href="'.route('books.show', $book->id).'"']) !!}
 {!! Form::close() !!}
 
 @endsection
