@@ -6,7 +6,11 @@
 <main>
     <div class="main">
         <h1 class="page-name">著書詳細ページです。</h1>
-        <a href="{{ route('books.edit', $book->id) }}" class="btn btn-primary">編集</a>
+        <div class="signup-form">
+          <form>
+            <a href="{{ route('books.edit', $book->id) }}" class="btn btn-primary">編集</a>
+          </form>
+        </div>
         <h2>著書詳細</h2>
         <div class="user-card">
             <p>{{ $book->title }}</p>

@@ -138,6 +138,9 @@ form {
     .page-name {
         padding-bottom: 22px;
     }
+    .signup-form {
+        margin-top: -20px;
+    }
     .card {
         padding-left: 22px;
         padding-top: 10px;
