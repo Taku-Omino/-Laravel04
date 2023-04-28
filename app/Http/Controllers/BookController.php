@@ -5,6 +5,7 @@ use App\Models\Book;
 
 use Illuminate\Http\Request;
 use App\Models\Author;
+use App\Models\User;
 
 
 class BookController extends Controller
@@ -39,7 +40,10 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
+        /*$book = new Book($request->all());
+        $book->save();*/
         $book = new Book($request->all());
+        $book->author = 'default value';
         $book->save();
 
         return redirect()->route('books.index');
@@ -67,8 +71,10 @@ class BookController extends Controller
     public function edit($id)
     {
         $book = Book::findOrFail($id);
-        return view('front.page.book.edit', compact('book'));
+        $authors = User::select('id', 'name')->pluck("name", "id");
+        return view('front.page.book.edit', compact('book', 'authors'));
     }
+
 
 
     /**
@@ -83,7 +89,7 @@ class BookController extends Controller
         $authors = User::select('id', 'name')->pluck("name", "id");
         $book->update($request->all());
         return view('front.page.book.show', compact('book', 'authors'));
-    }
+}
 
 
 
